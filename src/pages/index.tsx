@@ -7,7 +7,7 @@ import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from 'react-icons/a
 import C4 from '../../public/connec5.jpg'
 import rizzer from '../../public/rizzer.png'
 import safewalk from '../../public/safewalk.png'
-import Mohamad from '../../public/Elnayal_Mohamad.jpg'
+import Mohamad from '../../public/ElNayal_Mohamad.jpg'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
