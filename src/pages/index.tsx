@@ -4,10 +4,10 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
-import Mohamad from '../../public/Elnayal_Mohamad.jpg'
 import C4 from '../../public/connec5.jpg'
 import rizzer from '../../public/rizzer.png'
 import safewalk from '../../public/safewalk.png'
+import Mohamad from '../../public/Elnayal_Mohamad.jpg'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
