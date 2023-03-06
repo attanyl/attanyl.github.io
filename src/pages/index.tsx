@@ -10,6 +10,7 @@ import safewalk from '../../public/safewalk.png'
 import travelers from '../../public/travelers.png'
 import gentuity from '../../public/gentuity.png'
 import Mohamad from '../../public/ElNayal_Mohamad.jpg'
+import logo from '../../public/logo.png'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -18,13 +19,13 @@ export default function Home() {
       <Head>
         <title>Mohamad El Nayal</title>
         <meta name="description" content="Personal Website for Mohamad El Nayal" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="../../public/logo.png" />
       </Head>
-      <main className="px-10 bg-gradient-to-bl from-white">
+      <main className="bg-gray-100">
         <section className='min-h-screen'>
-          <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl font-burtons'>Mohamad El Nayal Portfolio</h1>
+          <nav className='py-10 px-10 mb-12 flex justify-between sticky top-0 z-50 bg-white'>
+            <Image src={logo} alt="" className='w-12'/>
             <ul className='flex items-center'>
               <li>
                 <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
@@ -34,9 +35,9 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className='text-center'>
-            <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 overflow-hidden'>
-              <Image src={Mohamad} layout="fill" objectFit='cover' alt="profilepic" />
+          <div className='text-center border-10 border-black'>
+            <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 overflow-hidden border-solid border-2 border-black'>
+              <Image src={Mohamad} layout="fill" objectFit='cover' alt="profilepic"/>
             </div>
             <h2 className='text-5xl py-4 text-green-600 font-medium'>Mohamad El Nayal</h2>
             <h3 className='text-2xl py-2'>FullStack Developer</h3>
