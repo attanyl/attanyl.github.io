@@ -22,11 +22,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="../../public/logo.png" />
       </Head>
-      <main className="bg-gray-100">
+      <main className="bg-gray-100 scroll-smooth md:scroll-auto">
         <section className='min-h-screen'>
-          <nav className='py-10 px-10 mb-12 flex justify-between sticky top-0 z-50 bg-white'>
-            <Image src={logo} alt="" className='w-12'/>
-            <ul className='flex items-center'>
+          <nav className='pt-5 px-10 mb-12 flex justify-between sticky top-0 z-50 bg-white'>
+            <Image src={logo} alt="" className='h-10 w-10'/>
+            <a href='#projects' className='text-lg font-bold text-green-600'>Projects</a>
+            <a href='#work' className='text-lg font-bold text-green-600'>Work</a>
+            <ul className='flex items-center mb-5'>
               <li>
                 <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
               </li>
@@ -51,8 +53,8 @@ export default function Home() {
 
         <section>
           <div>
-            <h1 className="text-center mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Personal Projects</span></h1>
-            <div className='mt-7 flex justify-center gap-16'>
+            <h1 id="projects" className="text-center mt-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl skip-to-content"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Personal Projects</span></h1>
+            <div className='mt-2 flex justify-center gap-16'>
             <div className="my-2 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gradient-to-bl from-slate-400 to-slate-700 dark:border-gray-700">
               <a target="_blank" href="https://devpost.com/software/connect-4-companion">
                 <Image className="rounded-t-lg max-h-25" src={C4} alt="" />
@@ -100,7 +102,7 @@ export default function Home() {
         </section>
         <section>
           <div>
-          <h1 className="text-center mt-5 py-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Work Experience</span></h1>
+          <h1 id="work" className="text-center mt-5 py-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Work Experience</span></h1>
           <div className="flex justify-center gap-10 pb-5">
         <div
           className="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row">
