@@ -48,7 +48,7 @@ export default function Home() {
 
         <section>
           <div>
-            <h1 className="mt-4 mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Personal Projects</span></h1>
+            <h1 className="text-center mt-10 mb-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Personal Projects</span></h1>
             <div className='mt-7 flex justify-center gap-16'>
             <div className="my-2 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gradient-to-bl from-slate-400 to-slate-700 dark:border-gray-700">
               <a href="#">
