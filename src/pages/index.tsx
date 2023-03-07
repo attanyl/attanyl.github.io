@@ -11,48 +11,50 @@ import travelers from '../../public/travelers.png'
 import gentuity from '../../public/gentuity.png'
 import Mohamad from '../../public/ElNayal_Mohamad.jpg'
 import logo from '../../public/logo.png'
+import {useState} from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div>
+    <div className={darkMode ? "dark" : ""}>
       <Head>
         <title>Mohamad El Nayal</title>
         <meta name="description" content="Personal Website for Mohamad El Nayal" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="../../public/logo.png" />
       </Head>
-      <main className="bg-gradient-to-r from-slate-50 to-slate-200 scroll-smooth md:scroll-auto">
+      <main className="bg-gradient-to-r from-slate-50 to-slate-200 scroll-smooth md:scroll-auto dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900">
         <section className='min-h-screen'>
-          <nav className='pt-5 px-10 mb-12 flex justify-between sticky top-0 z-50 bg-white'>
+          <nav className='pt-5 px-10 mb-12 flex justify-between sticky top-0 z-50 bg-white dark:bg-slate-700'>
             <Image src={logo} alt="" className='h-10 w-10' />
-            <a href='#about' className='text-lg font-bold text-green-600 group transition-all duration-300 ease-in-out'><span className='bg-bottom bg-gradient-to-r from-green-200 to-green-400 bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] rounded-xl transition-all duration-500 ease-out'>
+            <a href='#about' className='text-lg font-bold text-green-600 dark:text-green-300 group transition-all duration-300 ease-in-out'><span className='bg-bottom bg-gradient-to-r from-green-200 to-green-400 bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] rounded-xl transition-all duration-500 ease-out'>
               About Me
             </span></a>
-            <a href='#projects' className='text-lg font-bold text-green-600 group transition-all duration-300 ease-in-out'><span className='bg-bottom bg-gradient-to-r from-green-200 to-green-400 bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] rounded-xl transition-all duration-500 ease-out'>
+            <a href='#projects' className='text-lg font-bold text-green-600 dark:text-green-300 group transition-all duration-300 ease-in-out'><span className='bg-bottom bg-gradient-to-r from-green-200 to-green-400 bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] rounded-xl transition-all duration-500 ease-out'>
               Projects
             </span></a>
-            <a href='#work' className='text-lg font-bold text-green-600 group transition-all duration-300 ease-in-out'><span className='bg-bottom bg-gradient-to-r from-green-200 to-green-400 bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] rounded-xl transition-all duration-500 ease-out'>
+            <a href='#work' className='text-lg font-bold text-green-600 dark:text-green-300 group transition-all duration-300 ease-in-out'><span className='bg-bottom bg-gradient-to-r from-green-200 to-green-400 bg-[length:0%_5px] bg-no-repeat group-hover:bg-[length:100%_5px] rounded-xl transition-all duration-500 ease-out'>
               Work
             </span></a>
             <ul className='flex items-center mb-5'>
               <li className='relative transform transition duration-300 hover:scale-110'>
-                <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
+                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:fill-white' />
               </li>
               <li className='relative transform transition duration-300 hover:scale-110'>
-                <a className='bg-gradient-to-r from-green-600 to-green-800 bg-green-800 text-white px-4 py-2 rounded-md ml-8' href='../../public/ResumeForPortfolio.pdf' target="_blank">Resume</a>
+                <a className='bg-gradient-to-r from-green-600 to-green-800 bg-green-800 text-white px-4 py-2 rounded-md ml-8' href='ResumeForPortfolio.pdf' target="_blank">Resume</a>
               </li>
             </ul>
           </nav>
           <div className='text-center border-10 border-black'>
-            <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 overflow-hidden border-solid border-2 border-black transform transition duration-500 hover:scale-110'>
+            <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 overflow-hidden border-solid border-2 border-black dark:border-white dark:border-4 transform transition duration-500 hover:scale-110'>
               <Image src={Mohamad} layout="fill" objectFit='cover' alt="profilepic" />
             </div>
-            <h2 className='text-5xl py-4 text-green-600 font-medium'>Mohamad El Nayal</h2>
-            <h3 className='text-2xl py-2'>FullStack Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800'>Rising Senior at Northeastern University. Looking for Software Engineering internships/co-ops for the Summer/Fall 2023 term.</p>
+            <h2 className='text-5xl py-4 text-green-600 font-medium dark:text-green-200'>Mohamad El Nayal</h2>
+            <h3 className='text-2xl py-2 text-black dark:text-white'>FullStack Developer</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 dark:text-gray-300'>Rising Senior at Northeastern University. Looking for Software Engineering internships/co-ops for the Summer/Fall 2023 term.</p>
           </div>
-          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
+          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-100'>
             <a href='https://www.linkedin.com/in/mohamadelnayal/' target="_blank" className='relative transform transition duration-300 hover:scale-125'><AiFillLinkedin /></a>
             <a href='https://github.com/attanyl' target="_blank" className='relative transform transition duration-300 hover:scale-125'><AiFillGithub /></a>
           </div>
@@ -60,7 +62,7 @@ export default function Home() {
 
         <section className='mb-20'>
           <div>
-            <h1 id="about" className="text-center mt-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl skip-to-content"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">About Me</span></h1>
+            <h1 id="about" className="text-center mt-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-gray-200 md:text-4xl lg:text-5xl skip-to-content"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">About Me</span></h1>
             <div className='inline-flex w-3/5 ml-80'>
             <div className='mt-2 w-4/5'>
               <p className="text-gray-500 dark:text-gray-400">Hi! My name is Mohamad El Nayal and I am a rising senior at Northeastern University. My journey in Computer Science started way back in 2013 when I was an 11 year old Syrian boy living in Lebanon wanting to know how Minecraft mods work.
@@ -71,7 +73,7 @@ export default function Home() {
           </div>
           
           <div className=''>
-          <h2 className="mb-2 text-lg font-semibold text-slate-800">Technologies I&apos;ve learned:</h2>
+          <h2 className="mb-2 text-lg font-semibold text-slate-800 dark:text-slate-100">Technologies I&apos;ve learned:</h2>
           <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
               <li>
                   Programming Languages
@@ -99,7 +101,7 @@ export default function Home() {
 
         <section className='mt-10'>
           <div>
-            <h1 id="projects" className="text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl skip-to-content"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Personal Projects</span></h1>
+            <h1 id="projects" className="text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-gray-200 md:text-4xl lg:text-5xl skip-to-content"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Personal Projects</span></h1>
             <div className='mt-2 flex justify-center gap-16'>
               <div className="my-2 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gradient-to-bl from-slate-400 to-slate-700 dark:border-gray-700 relative transform transition duration-300 hover:scale-105">
                 <a target="_blank" href="https://devpost.com/software/connect-4-companion">
@@ -148,7 +150,7 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h1 id="work" className="text-center mt-5 py-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Work Experience</span></h1>
+            <h1 id="work" className="text-center mt-5 py-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-gray-200 md:text-4xl lg:text-5xl"><span className="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Work Experience</span></h1>
             <div className="flex justify-center gap-10 pb-5">
               <div
                 className="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row relative transform transition duration-300 hover:scale-105">
