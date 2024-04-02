@@ -52,7 +52,7 @@ export default function Home() {
             </div>
             <h2 className='text-5xl py-4 text-green-600 font-medium dark:text-green-200'>Mohamad El Nayal</h2>
             <h3 className='text-2xl py-2 text-black dark:text-white'>FullStack Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800 dark:text-gray-300'>Rising Senior at Northeastern University. Looking for Software Engineering internships/co-ops for the Summer/Fall 2023 term.</p>
+            <p className='text-md py-5 leading-8 text-gray-800 dark:text-gray-300'>Rising Senior at Northeastern University. Looking for Software Engineering internships/co-ops for the Summer/Fall 2024 term.</p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-100'>
             <a href='https://www.linkedin.com/in/mohamadelnayal/' target="_blank" className='relative transform transition duration-300 hover:scale-125'><AiFillLinkedin /></a>
